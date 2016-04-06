@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  YEXYearViewController.h
 //  WanCalendar
 //
 //  Created by 叶希焰 on 16/3/31.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface YEXYearViewController : UIViewController
 
 @end
-

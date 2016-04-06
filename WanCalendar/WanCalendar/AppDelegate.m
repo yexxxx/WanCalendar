@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    YEXDayViewController *dayVC = [[YEXDayViewController alloc] init];
+    YEXDayViewController *dayVC = [[YEXDayViewController alloc] initWithNibName:@"YEXDayViewController" bundle:nil];
     self.window.rootViewController = dayVC;
     [self.window makeKeyAndVisible];
     return YES;
