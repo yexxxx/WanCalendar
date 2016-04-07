@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class YEXLunarDay;
+typedef void(^viewTapBlock)();
 @interface YEXDayScrollView : UIView
 
 @property(nonatomic, strong)NSDate *date;
+@property(nonatomic, strong)YEXLunarDay *lunarDay;
+@property(nonatomic, strong)YEXLunarDay *lunarToday;
+@property (nonatomic, copy) viewTapBlock tapBlock;
 
 @end

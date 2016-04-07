@@ -10,7 +10,11 @@
 
 
 #import "UIView+YEXView.h"
+#import "Masonry.h"
+#import "SVProgressHUD.h"
 
+#define screenW [UIScreen mainScreen].bounds.size.width
+#define screenH [UIScreen mainScreen].bounds.size.height
 
 #ifdef DEBUG // 调试阶段
 #define YEXLog(...)  NSLog(__VA_ARGS__)

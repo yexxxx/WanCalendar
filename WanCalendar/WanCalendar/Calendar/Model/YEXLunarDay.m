@@ -18,7 +18,7 @@
 
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key {
     if ([key isEqualToString:@"year-month"]) {
-        self.month = [value substringFromIndex:4];
+        self.month = [value substringFromIndex:5];
     }
 }
 

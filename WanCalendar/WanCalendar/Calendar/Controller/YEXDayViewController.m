@@ -10,10 +10,12 @@
 #import "YEXYearViewController.h"
 #import "YEXNetAPI.h"
 #import "YEXDayScrollView.h"
+#import "YEXLunarDay.h"
 
 @interface YEXDayViewController ()
 
 @property(nonatomic, weak)YEXDayScrollView *dayView;
+
 
 @end
 
@@ -21,7 +23,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self dayView];
+    self.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    __weak typeof(self) weakSelf = self;
+    [[YEXNetAPI netAPI] getDataWithType:YEXNetTypeDay andDate:[NSDate date] success:^(id responseObject) {
+        if ([responseObject[@"reason"] isEqualToString:@"Success"]) {
+            YEXLunarDay *lunarDay = [YEXLunarDay lunarDayWithDict:responseObject[@"result"][@"data"]];
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                weakSelf.dayView.lunarDay = lunarDay;
+                weakSelf.dayView.lunarToday = lunarDay;
+            });
+//            self.dayView.lunarDay = lunarDay;
+        }else{
+            [SVProgressHUD showInfoWithStatus:responseObject[@"reason"]];
+        }
+    } failure:^(NSError *error) {
+         [SVProgressHUD showInfoWithStatus:error.userInfo[NSLocalizedDescriptionKey]];
+    }];
+    
+    //模糊效果
 //    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
 //    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
 //    effectView.frame = CGRectMake(0, 0, 200, 200);
@@ -33,8 +53,12 @@
 {
     if (!_dayView) {
         YEXDayScrollView *view = [[YEXDayScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        
+        view.tapBlock =  ^() {
+            YEXYearViewController *yearVC = [[YEXYearViewController alloc] init];;
+            [self presentViewController:yearVC animated:yearVC completion:nil];
+        };
         [self.view addSubview:view];
+        _dayView = view;
     }
     return _dayView;
 }
@@ -55,16 +79,11 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-    self.modalPresentationStyle = UIModalPresentationOverFullScreen;
-    [[YEXNetAPI netAPI] getDataWithType:YEXNetTypeYear andDate:[NSDate date] success:^(id responseObject) {
-//        NSLog(@"%@",responseObject);
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
-    YEXYearViewController *yearVC = [[YEXYearViewController alloc] init];
-    [self presentViewController:yearVC animated:yearVC completion:nil];
-}
+//-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    
+//    self.modalPresentationStyle = UIModalPresentationOverFullScreen;
+//    YEXYearViewController *yearVC = [[YEXYearViewController alloc] init];
+//    [self presentViewController:yearVC animated:yearVC completion:nil];
+//}
 
 @end
