@@ -12,9 +12,14 @@
 #import "UIView+YEXView.h"
 #import "Masonry.h"
 #import "SVProgressHUD.h"
+#import <BlocksKit+UIKit.h>
 
 #define screenW [UIScreen mainScreen].bounds.size.width
 #define screenH [UIScreen mainScreen].bounds.size.height
+#define bgColor [UIColor colorWithRed:254/255.0 green:253/255.0 blue:251/255.0 alpha:1.0]
+#define goldColor [UIColor colorWithRed:235/255.0  green:215/255.0  blue:177/255.0 alpha:1.0]
+#define headerFont [UIFont fontWithName:@"FZXiaoBiaoSong-B05S" size:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle1].pointSize]
+#define textFont [UIFont fontWithName:@"FZXiaoBiaoSong-B05S" size:[UIFont preferredFontForTextStyle:UIFontTextStyleBody].pointSize]
 
 #ifdef DEBUG // 调试阶段
 #define YEXLog(...)  NSLog(__VA_ARGS__)

@@ -10,6 +10,21 @@
 		6BDBCA9F1D4A2AD0F7755D7A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A98EADF1E717C9F6B9473BE5 /* libPods.a */; };
 		C8087D301CAE0E3000A49C12 /* YEXDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8087D2F1CAE0E3000A49C12 /* YEXDayViewController.xib */; };
 		C8087D371CAE57D700A49C12 /* YEXLunarDay.m in Sources */ = {isa = PBXBuildFile; fileRef = C8087D361CAE57D700A49C12 /* YEXLunarDay.m */; };
+		C82C2C2F1CD1BDD60039BA2B /* YEXReminderTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C82C2C2D1CD1BDD60039BA2B /* YEXReminderTableVC.m */; };
+		C82C2C301CD1BDD60039BA2B /* YEXReminderTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82C2C2E1CD1BDD60039BA2B /* YEXReminderTableVC.xib */; };
+		C82C2C371CD20E180039BA2B /* YEXReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82C2C351CD20E180039BA2B /* YEXReminderViewController.m */; };
+		C82C2C381CD20E180039BA2B /* YEXReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82C2C361CD20E180039BA2B /* YEXReminderViewController.xib */; };
+		C83FDD611CD75435000B96A5 /* YEXReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = C83FDD601CD75435000B96A5 /* YEXReminder.m */; };
+		C83FDD641CD847AC000B96A5 /* NSObject+YEXArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C83FDD631CD847AC000B96A5 /* NSObject+YEXArchive.m */; };
+		C83FDD681CD85EB9000B96A5 /* YEXReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C83FDD661CD85EB9000B96A5 /* YEXReminderCell.m */; };
+		C83FDD691CD85EB9000B96A5 /* YEXReminderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83FDD671CD85EB9000B96A5 /* YEXReminderCell.xib */; };
+		C85F73391CD3B1A300FFAFBE /* YEXUnflodTransiation.m in Sources */ = {isa = PBXBuildFile; fileRef = C85F73381CD3B1A300FFAFBE /* YEXUnflodTransiation.m */; };
+		C85F733D1CD63D1900FFAFBE /* YEXTimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C85F733B1CD63D1900FFAFBE /* YEXTimePickerViewController.m */; };
+		C85F733E1CD63D1900FFAFBE /* YEXTimePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C85F733C1CD63D1900FFAFBE /* YEXTimePickerViewController.xib */; };
+		C85F73421CD7214E00FFAFBE /* YEXCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C85F73401CD7214E00FFAFBE /* YEXCategoryTableViewController.m */; };
+		C85F73471CD7218200FFAFBE /* YEXAddRmdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C85F73451CD7218200FFAFBE /* YEXAddRmdTableViewController.m */; };
+		C85F73511CD7253100FFAFBE /* YEXCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C85F73501CD7253100FFAFBE /* YEXCategoryCell.m */; };
+		C870C6551CD360E0003794E4 /* YEXUnflodTransiationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C870C6541CD360E0003794E4 /* YEXUnflodTransiationAnimator.m */; };
 		C88436C21CB3A7A600422AA4 /* UIView+YEXView.m in Sources */ = {isa = PBXBuildFile; fileRef = C88436BF1CB3A7A600422AA4 /* UIView+YEXView.m */; };
 		C88436C31CB3A7A600422AA4 /* YEXNetAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C88436C11CB3A7A600422AA4 /* YEXNetAPI.m */; };
 		C88436C61CB4B8A800422AA4 /* YEXDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C88436C51CB4B8A800422AA4 /* YEXDateView.m */; };
@@ -73,6 +88,7 @@
 		C8F9D65F1CB6513900C113A9 /* NSDate+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F9D64D1CB6513900C113A9 /* NSDate+FSExtension.m */; };
 		C8F9D6601CB6513900C113A9 /* NSString+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F9D64F1CB6513900C113A9 /* NSString+FSExtension.m */; };
 		C8F9D6611CB6513900C113A9 /* UIView+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F9D6511CB6513900C113A9 /* UIView+FSExtension.m */; };
+		C8F9D6641CB651DD00C113A9 /* YEXMonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F9D6631CB651DD00C113A9 /* YEXMonthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +115,32 @@
 		C8087D2F1CAE0E3000A49C12 /* YEXDayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXDayViewController.xib; sourceTree = "<group>"; };
 		C8087D351CAE57D700A49C12 /* YEXLunarDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXLunarDay.h; sourceTree = "<group>"; };
 		C8087D361CAE57D700A49C12 /* YEXLunarDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXLunarDay.m; sourceTree = "<group>"; };
+		C82C2C2C1CD1BDD60039BA2B /* YEXReminderTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXReminderTableVC.h; sourceTree = "<group>"; };
+		C82C2C2D1CD1BDD60039BA2B /* YEXReminderTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXReminderTableVC.m; sourceTree = "<group>"; };
+		C82C2C2E1CD1BDD60039BA2B /* YEXReminderTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXReminderTableVC.xib; sourceTree = "<group>"; };
+		C82C2C341CD20E180039BA2B /* YEXReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXReminderViewController.h; sourceTree = "<group>"; };
+		C82C2C351CD20E180039BA2B /* YEXReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXReminderViewController.m; sourceTree = "<group>"; };
+		C82C2C361CD20E180039BA2B /* YEXReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXReminderViewController.xib; sourceTree = "<group>"; };
+		C83FDD5F1CD75435000B96A5 /* YEXReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXReminder.h; sourceTree = "<group>"; };
+		C83FDD601CD75435000B96A5 /* YEXReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXReminder.m; sourceTree = "<group>"; };
+		C83FDD621CD847AC000B96A5 /* NSObject+YEXArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YEXArchive.h"; sourceTree = "<group>"; };
+		C83FDD631CD847AC000B96A5 /* NSObject+YEXArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YEXArchive.m"; sourceTree = "<group>"; };
+		C83FDD651CD85EB9000B96A5 /* YEXReminderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXReminderCell.h; sourceTree = "<group>"; };
+		C83FDD661CD85EB9000B96A5 /* YEXReminderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXReminderCell.m; sourceTree = "<group>"; };
+		C83FDD671CD85EB9000B96A5 /* YEXReminderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXReminderCell.xib; sourceTree = "<group>"; };
+		C85F73371CD3B1A300FFAFBE /* YEXUnflodTransiation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXUnflodTransiation.h; sourceTree = "<group>"; };
+		C85F73381CD3B1A300FFAFBE /* YEXUnflodTransiation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXUnflodTransiation.m; sourceTree = "<group>"; };
+		C85F733A1CD63D1900FFAFBE /* YEXTimePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXTimePickerViewController.h; sourceTree = "<group>"; };
+		C85F733B1CD63D1900FFAFBE /* YEXTimePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXTimePickerViewController.m; sourceTree = "<group>"; };
+		C85F733C1CD63D1900FFAFBE /* YEXTimePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXTimePickerViewController.xib; sourceTree = "<group>"; };
+		C85F733F1CD7214E00FFAFBE /* YEXCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXCategoryTableViewController.h; sourceTree = "<group>"; };
+		C85F73401CD7214E00FFAFBE /* YEXCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXCategoryTableViewController.m; sourceTree = "<group>"; };
+		C85F73441CD7218200FFAFBE /* YEXAddRmdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXAddRmdTableViewController.h; sourceTree = "<group>"; };
+		C85F73451CD7218200FFAFBE /* YEXAddRmdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXAddRmdTableViewController.m; sourceTree = "<group>"; };
+		C85F734F1CD7253100FFAFBE /* YEXCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXCategoryCell.h; sourceTree = "<group>"; };
+		C85F73501CD7253100FFAFBE /* YEXCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXCategoryCell.m; sourceTree = "<group>"; };
+		C870C6531CD360E0003794E4 /* YEXUnflodTransiationAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXUnflodTransiationAnimator.h; sourceTree = "<group>"; };
+		C870C6541CD360E0003794E4 /* YEXUnflodTransiationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXUnflodTransiationAnimator.m; sourceTree = "<group>"; };
 		C88436BD1CB3A7A600422AA4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C88436BE1CB3A7A600422AA4 /* UIView+YEXView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YEXView.h"; sourceTree = "<group>"; };
 		C88436BF1CB3A7A600422AA4 /* UIView+YEXView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YEXView.m"; sourceTree = "<group>"; };
@@ -194,6 +236,8 @@
 		C8F9D64F1CB6513900C113A9 /* NSString+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FSExtension.m"; sourceTree = "<group>"; };
 		C8F9D6501CB6513900C113A9 /* UIView+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FSExtension.h"; sourceTree = "<group>"; };
 		C8F9D6511CB6513900C113A9 /* UIView+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FSExtension.m"; sourceTree = "<group>"; };
+		C8F9D6621CB651DD00C113A9 /* YEXMonthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXMonthViewController.h; sourceTree = "<group>"; };
+		C8F9D6631CB651DD00C113A9 /* YEXMonthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXMonthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,15 +283,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C870C6521CD3609B003794E4 /* Transiations */ = {
+			isa = PBXGroup;
+			children = (
+				C85F73371CD3B1A300FFAFBE /* YEXUnflodTransiation.h */,
+				C85F73381CD3B1A300FFAFBE /* YEXUnflodTransiation.m */,
+				C870C6531CD360E0003794E4 /* YEXUnflodTransiationAnimator.h */,
+				C870C6541CD360E0003794E4 /* YEXUnflodTransiationAnimator.m */,
+			);
+			path = Transiations;
+			sourceTree = "<group>";
+		};
 		C88436BC1CB3A7A600422AA4 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				C870C6521CD3609B003794E4 /* Transiations */,
 				C8F9D62C1CB62B8A00C113A9 /* XBS.ttf */,
 				C88436BD1CB3A7A600422AA4 /* PrefixHeader.pch */,
 				C88436BE1CB3A7A600422AA4 /* UIView+YEXView.h */,
 				C88436BF1CB3A7A600422AA4 /* UIView+YEXView.m */,
 				C88436C01CB3A7A600422AA4 /* YEXNetAPI.h */,
 				C88436C11CB3A7A600422AA4 /* YEXNetAPI.m */,
+				C83FDD621CD847AC000B96A5 /* NSObject+YEXArchive.h */,
+				C83FDD631CD847AC000B96A5 /* NSObject+YEXArchive.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -383,6 +441,8 @@
 				C896D8441CAD18B800F4B5B2 /* YEXDayViewController.h */,
 				C896D8451CAD18B800F4B5B2 /* YEXDayViewController.m */,
 				C8087D2F1CAE0E3000A49C12 /* YEXDayViewController.xib */,
+				C8F9D6621CB651DD00C113A9 /* YEXMonthViewController.h */,
+				C8F9D6631CB651DD00C113A9 /* YEXMonthViewController.m */,
 				C896D8471CAD209600F4B5B2 /* YEXYearViewController.h */,
 				C896D8481CAD209600F4B5B2 /* YEXYearViewController.m */,
 			);
@@ -394,6 +454,8 @@
 			children = (
 				C8087D351CAE57D700A49C12 /* YEXLunarDay.h */,
 				C8087D361CAE57D700A49C12 /* YEXLunarDay.m */,
+				C83FDD5F1CD75435000B96A5 /* YEXReminder.h */,
+				C83FDD601CD75435000B96A5 /* YEXReminder.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -409,6 +471,9 @@
 				C8F9D62A1CB552FC00C113A9 /* YEXYellowView.m */,
 				C892E64B1CAE6F200055B095 /* YEXDayScrollView.h */,
 				C892E64C1CAE6F200055B095 /* YEXDayScrollView.m */,
+				C83FDD651CD85EB9000B96A5 /* YEXReminderCell.h */,
+				C83FDD661CD85EB9000B96A5 /* YEXReminderCell.m */,
+				C83FDD671CD85EB9000B96A5 /* YEXReminderCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -488,6 +553,19 @@
 		C896D8411CAD174400F4B5B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C82C2C2C1CD1BDD60039BA2B /* YEXReminderTableVC.h */,
+				C82C2C2D1CD1BDD60039BA2B /* YEXReminderTableVC.m */,
+				C82C2C2E1CD1BDD60039BA2B /* YEXReminderTableVC.xib */,
+				C82C2C341CD20E180039BA2B /* YEXReminderViewController.h */,
+				C82C2C351CD20E180039BA2B /* YEXReminderViewController.m */,
+				C82C2C361CD20E180039BA2B /* YEXReminderViewController.xib */,
+				C85F733A1CD63D1900FFAFBE /* YEXTimePickerViewController.h */,
+				C85F733B1CD63D1900FFAFBE /* YEXTimePickerViewController.m */,
+				C85F733C1CD63D1900FFAFBE /* YEXTimePickerViewController.xib */,
+				C85F733F1CD7214E00FFAFBE /* YEXCategoryTableViewController.h */,
+				C85F73401CD7214E00FFAFBE /* YEXCategoryTableViewController.m */,
+				C85F73441CD7218200FFAFBE /* YEXAddRmdTableViewController.h */,
+				C85F73451CD7218200FFAFBE /* YEXAddRmdTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -502,6 +580,8 @@
 		C896D8431CAD174400F4B5B2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C85F734F1CD7253100FFAFBE /* YEXCategoryCell.h */,
+				C85F73501CD7253100FFAFBE /* YEXCategoryCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -655,6 +735,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82C2C301CD1BDD60039BA2B /* YEXReminderTableVC.xib in Resources */,
 				C892E6CA1CAE76CB0055B095 /* 7.png in Resources */,
 				C892E6C31CAE76CB0055B095 /* 29.png in Resources */,
 				C892E6C61CAE76CB0055B095 /* 31.png in Resources */,
@@ -667,6 +748,7 @@
 				C892E6BE1CAE76CB0055B095 /* 24.png in Resources */,
 				C8087D301CAE0E3000A49C12 /* YEXDayViewController.xib in Resources */,
 				C896D8111CACD98400F4B5B2 /* LaunchScreen.storyboard in Resources */,
+				C83FDD691CD85EB9000B96A5 /* YEXReminderCell.xib in Resources */,
 				C892E6BC1CAE76CB0055B095 /* 22.png in Resources */,
 				C892E6B21CAE76CB0055B095 /* 13.png in Resources */,
 				C892E6B81CAE76CB0055B095 /* 19.png in Resources */,
@@ -683,10 +765,12 @@
 				C8F9D62D1CB62B8A00C113A9 /* XBS.ttf in Resources */,
 				C896D80C1CACD98400F4B5B2 /* Main.storyboard in Resources */,
 				C892E6BA1CAE76CB0055B095 /* 20.png in Resources */,
+				C82C2C381CD20E180039BA2B /* YEXReminderViewController.xib in Resources */,
 				C892E6C01CAE76CB0055B095 /* 26.png in Resources */,
 				C892E6C51CAE76CB0055B095 /* 30.png in Resources */,
 				C892E6B91CAE76CB0055B095 /* 2.png in Resources */,
 				C892E6B51CAE76CB0055B095 /* 16.png in Resources */,
+				C85F733E1CD63D1900FFAFBE /* YEXTimePickerViewController.xib in Resources */,
 				C892E6B01CAE76CB0055B095 /* 11.png in Resources */,
 				C892E6AE1CAE76CB0055B095 /* 1.png in Resources */,
 				C892E6B71CAE76CB0055B095 /* 18.png in Resources */,
@@ -766,16 +850,26 @@
 			files = (
 				C896D8461CAD18B800F4B5B2 /* YEXDayViewController.m in Sources */,
 				C88436C21CB3A7A600422AA4 /* UIView+YEXView.m in Sources */,
+				C83FDD611CD75435000B96A5 /* YEXReminder.m in Sources */,
+				C85F73471CD7218200FFAFBE /* YEXAddRmdTableViewController.m in Sources */,
+				C82C2C2F1CD1BDD60039BA2B /* YEXReminderTableVC.m in Sources */,
 				C8F9D6531CB6513900C113A9 /* FSCalendar+IBExtension.m in Sources */,
+				C8F9D6641CB651DD00C113A9 /* YEXMonthViewController.m in Sources */,
+				C82C2C371CD20E180039BA2B /* YEXReminderViewController.m in Sources */,
+				C83FDD681CD85EB9000B96A5 /* YEXReminderCell.m in Sources */,
 				C8F9D6551CB6513900C113A9 /* FSCalendarAnimator.m in Sources */,
 				C8F9D6561CB6513900C113A9 /* FSCalendarAppearance.m in Sources */,
+				C85F73391CD3B1A300FFAFBE /* YEXUnflodTransiation.m in Sources */,
 				C8F9D6521CB6513900C113A9 /* CALayer+FSExtension.m in Sources */,
 				C896D8061CACD98400F4B5B2 /* AppDelegate.m in Sources */,
 				C8F9D65D1CB6513900C113A9 /* FSCalendarStickyHeader.m in Sources */,
 				C8F9D62B1CB552FC00C113A9 /* YEXYellowView.m in Sources */,
 				C8087D371CAE57D700A49C12 /* YEXLunarDay.m in Sources */,
+				C85F73511CD7253100FFAFBE /* YEXCategoryCell.m in Sources */,
 				C896D8491CAD209600F4B5B2 /* YEXYearViewController.m in Sources */,
+				C85F73421CD7214E00FFAFBE /* YEXCategoryTableViewController.m in Sources */,
 				C8F9D6541CB6513900C113A9 /* FSCalendar.m in Sources */,
+				C83FDD641CD847AC000B96A5 /* NSObject+YEXArchive.m in Sources */,
 				C8F9D65A1CB6513900C113A9 /* FSCalendarEventIndicator.m in Sources */,
 				C8F9D6591CB6513900C113A9 /* FSCalendarConstance.m in Sources */,
 				C8F9D65C1CB6513900C113A9 /* FSCalendarHeader.m in Sources */,
@@ -784,8 +878,10 @@
 				C8F9D6601CB6513900C113A9 /* NSString+FSExtension.m in Sources */,
 				C892E64D1CAE6F200055B095 /* YEXDayScrollView.m in Sources */,
 				C8F9D65B1CB6513900C113A9 /* FSCalendarFlowLayout.m in Sources */,
+				C85F733D1CD63D1900FFAFBE /* YEXTimePickerViewController.m in Sources */,
 				C8F9D6581CB6513900C113A9 /* FSCalendarCollectionView.m in Sources */,
 				C88436C61CB4B8A800422AA4 /* YEXDateView.m in Sources */,
+				C870C6551CD360E0003794E4 /* YEXUnflodTransiationAnimator.m in Sources */,
 				C8F9D6301CB6331900C113A9 /* YEXRowView.m in Sources */,
 				C8F9D6571CB6513900C113A9 /* FSCalendarCell.m in Sources */,
 				C896D8031CACD98400F4B5B2 /* main.m in Sources */,

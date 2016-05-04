@@ -30,7 +30,7 @@ static const CGFloat middlePercentage = 269.0 / 736;
     NSUInteger nextIndex;
 }
 
-@property (nonatomic, strong) NSDate    *currentDate;
+
 @property (nonatomic, assign) Direction    direction;
 @property (nonatomic, weak  ) UIScrollView *scrollView;
 @property (nonatomic, weak  ) UIImageView  *preImageView;
@@ -52,9 +52,13 @@ static const CGFloat middlePercentage = 269.0 / 736;
             self.date = [NSDate date];
         }
         [self tapView];
-        [self addObserver:self forKeyPath:@"direction" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+//        [self addObserver:self forKeyPath:@"direction" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     }
     return self;
+}
+
+-(void)dealloc {
+//    [self removeObserver:self forKeyPath:@"direction"];
 }
 
 -(void)setDate:(NSDate *)date {
@@ -75,39 +79,7 @@ static const CGFloat middlePercentage = 269.0 / 736;
     //_images为图片数组
     if(change[NSKeyValueChangeNewKey] == change[NSKeyValueChangeOldKey]) return;
     
-    if ([change[NSKeyValueChangeNewKey] intValue] == DirecRight) {
-        self.nextImageView.frame = CGRectMake(0, 0, [self width], [self height]);
-//        self.currentDate = [self.currentDate dateByAddingTimeInterval:-60 * 60 *24];
-        self.nextImageView.image = [self imageFromDate:[self.currentDate dateByAddingTimeInterval:-60 * 60 *24]];
-        [[YEXNetAPI netAPI] getDataWithType:YEXNetTypeDay andDate:[self.currentDate dateByAddingTimeInterval:-60 * 60 *24] success:^(id responseObject) {
-            if ([responseObject[@"reason"] isEqualToString:@"Success"]) {
-                YEXLunarDay *lunarDay = [YEXLunarDay lunarDayWithDict:responseObject[@"result"][@"data"]];
-                dispatch_sync(dispatch_get_main_queue(), ^{
-                    self.lunarDay = lunarDay;
-                });
-            }else{
-                [SVProgressHUD showInfoWithStatus:responseObject[@"reason"]];
-            }
-        } failure:^(NSError *error) {
-            [SVProgressHUD showInfoWithStatus:error.userInfo[NSLocalizedDescriptionKey]];
-        }];
-    } else if ([change[NSKeyValueChangeNewKey] intValue] == DirecLeft){
-        self.nextImageView.frame = CGRectMake([self width] * 2, 0, [self width], [self height]);
-//        self.currentDate = [self.currentDate dateByAddingTimeInterval:60 * 60 * 24];
-        self.nextImageView.image = [self imageFromDate:[self.currentDate dateByAddingTimeInterval:60 * 60 * 24]];
-        [[YEXNetAPI netAPI] getDataWithType:YEXNetTypeDay andDate:[self.currentDate dateByAddingTimeInterval:60 * 60 *24] success:^(id responseObject) {
-            if ([responseObject[@"reason"] isEqualToString:@"Success"]) {
-                YEXLunarDay *lunarDay = [YEXLunarDay lunarDayWithDict:responseObject[@"result"][@"data"]];
-                dispatch_sync(dispatch_get_main_queue(), ^{
-                    self.lunarDay = lunarDay;
-                });
-            }else{
-                [SVProgressHUD showInfoWithStatus:responseObject[@"reason"]];
-            }
-        } failure:^(NSError *error) {
-            [SVProgressHUD showInfoWithStatus:error.userInfo[NSLocalizedDescriptionKey]];
-        }];
-    }
+    
     
 //    self.currentImageView.image = self.nextImageView.image;
     
@@ -211,7 +183,7 @@ static const CGFloat middlePercentage = 269.0 / 736;
 
 -(void)viewTapped:(UITapGestureRecognizer *)tap {
     if (self.tapBlock) {
-        self.tapBlock();
+        self.tapBlock(self.currentDate);
     }
 }
 
@@ -243,18 +215,71 @@ static const CGFloat middlePercentage = 269.0 / 736;
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (scrollView.contentOffset.x == [self width]) return;
-    self.direction = scrollView.contentOffset.x > [self width] ? DirecLeft : DirecRight;
+    if (scrollView.contentOffset.x < self.width) {
+        self.nextImageView.frame = CGRectMake(0, 0, [self width], [self height]);
+        self.nextImageView.image = [self imageFromDate:[self.currentDate dateByAddingTimeInterval:-60 * 60 *24]];
+        
+    } else if (scrollView.contentOffset.x > self.width){
+        self.nextImageView.frame = CGRectMake([self width] * 2, 0, [self width], [self height]);
+        self.nextImageView.image = [self imageFromDate:[self.currentDate dateByAddingTimeInterval:60 * 60 * 24]];
+    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    if (scrollView.contentOffset.x == [self width]) {
+        self.dateView.hidden = NO;
+        self.yellowView.hidden = NO;
+    };
+    if (scrollView.contentOffset.x <= [self width] * 0.5) {
+        [[YEXNetAPI netAPI] getDataWithType:YEXNetTypeDay andDate:[self.currentDate dateByAddingTimeInterval:-60 * 60 *24] success:^(id responseObject) {
+            if ([responseObject[@"reason"] isEqualToString:@"Success"]) {
+                YEXLunarDay *lunarDay = [YEXLunarDay lunarDayWithDict:responseObject[@"result"][@"data"]];
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    self.lunarDay = lunarDay;
+                    self.dateView.hidden = NO;
+                    self.yellowView.hidden = NO;
+                   
+                });
+            }else{
+                [SVProgressHUD showInfoWithStatus:responseObject[@"reason"]];
+            }
+        } failure:^(NSError *error) {
+            [SVProgressHUD showInfoWithStatus:error.userInfo[NSLocalizedDescriptionKey]];
+        }];
+    }else if (scrollView.contentOffset.x >= [self width] * 1.5) {
+        [[YEXNetAPI netAPI] getDataWithType:YEXNetTypeDay andDate:[self.currentDate dateByAddingTimeInterval:60 * 60 *24] success:^(id responseObject) {
+            if ([responseObject[@"reason"] isEqualToString:@"Success"]) {
+                YEXLunarDay *lunarDay = [YEXLunarDay lunarDayWithDict:responseObject[@"result"][@"data"]];
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    self.lunarDay = lunarDay;
+                    self.dateView.hidden = NO;
+                    self.yellowView.hidden = NO;
+                });
+            }else{
+                [SVProgressHUD showInfoWithStatus:responseObject[@"reason"]];
+            }
+        } failure:^(NSError *error) {
+            [SVProgressHUD showInfoWithStatus:error.userInfo[NSLocalizedDescriptionKey]];
+        }];
+        
+    }
+    self.direction = scrollView.contentOffset.x > [self width] ? DirecLeft : DirecRight;
+    if (self.direction == DirecRight) {
+        self.nextImageView.frame = CGRectMake(0, 0, [self width], [self height]);
+        self.nextImageView.image = [self imageFromDate:[self.currentDate dateByAddingTimeInterval:-60 * 60 *24]];
+        
+    } else if (self.direction == DirecLeft){
+        self.nextImageView.frame = CGRectMake([self width] * 2, 0, [self width], [self height]);
+        self.nextImageView.image = [self imageFromDate:[self.currentDate dateByAddingTimeInterval:60 * 60 * 24]];
+    }
+
     [self pauseScroll];
-    self.dateView.hidden = NO;
-    self.yellowView.hidden = NO;
+//    self.dateView.hidden = NO;
+//    self.yellowView.hidden = NO;
 }
 
 - (void)pauseScroll {
-    self.direction = DirecNone;//清空滚动方向
     //判断最终是滚到了右边还是左边
     int index = self.scrollView.contentOffset.x / [self width];
     if (index == 1) return; //等于1表示最后没有滚动，返回不做任何操作

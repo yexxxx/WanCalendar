@@ -8,6 +8,7 @@
 
 #import "YEXDayViewController.h"
 #import "YEXYearViewController.h"
+#import "YEXMonthViewController.h"
 #import "YEXNetAPI.h"
 #import "YEXDayScrollView.h"
 #import "YEXLunarDay.h"
@@ -23,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    [self dayView];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     __weak typeof(self) weakSelf = self;
     [[YEXNetAPI netAPI] getDataWithType:YEXNetTypeDay andDate:[NSDate date] success:^(id responseObject) {
@@ -53,9 +54,13 @@
 {
     if (!_dayView) {
         YEXDayScrollView *view = [[YEXDayScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        view.tapBlock =  ^() {
-            YEXYearViewController *yearVC = [[YEXYearViewController alloc] init];;
-            [self presentViewController:yearVC animated:yearVC completion:nil];
+         __weak typeof(self) weakSelf = self;
+        view.tapBlock =  ^(NSDate *date) {
+            YEXMonthViewController *monthVC = [[YEXMonthViewController alloc] init];
+            UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:monthVC];
+            monthVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            monthVC.currentDate = date;
+            [weakSelf presentViewController:navVC animated:YES completion:nil];
         };
         [self.view addSubview:view];
         _dayView = view;
@@ -78,12 +83,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    
-//    self.modalPresentationStyle = UIModalPresentationOverFullScreen;
-//    YEXYearViewController *yearVC = [[YEXYearViewController alloc] init];
-//    [self presentViewController:yearVC animated:yearVC completion:nil];
-//}
 
 @end

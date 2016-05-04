@@ -47,7 +47,7 @@ typedef void(^handler)();
     
     NSMutableURLRequest *requestM = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[self DomainWithType:type]]];
     requestM.HTTPMethod = @"post";
-    requestM.timeoutInterval = 600;
+    requestM.timeoutInterval = 300;
     requestM.HTTPBody = [[self postBodyWithType:type andDate:date] dataUsingEncoding:NSUTF8StringEncoding];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:requestM
                completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
