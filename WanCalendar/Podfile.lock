@@ -29,6 +29,7 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - BmobSDK (1.7.0)
   - LinkBlock (1.0.2)
   - Masonry (1.0.0)
   - SDWebImage (3.7.5):
@@ -39,6 +40,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - BlocksKit
+  - BmobSDK
   - LinkBlock
   - Masonry
   - SDWebImage
@@ -47,6 +49,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  BmobSDK: 1a7bb2aa514e69663f5b561a5c5cc5b479b20ad2
   LinkBlock: ce1795a8aa6b8b43accdd392793a034196395290
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461

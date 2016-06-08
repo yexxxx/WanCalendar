@@ -1,4 +1,4 @@
-//
+ //
 //  YEXReminderViewController.m
 //  WanCalendar
 //
@@ -58,22 +58,26 @@
                                              bk_initWithTitle:@"取消"
                                              style:UIBarButtonItemStyleDone
                                             handler:^(id sender) {
+                                                if (weakSelf.remindePath && weakSelf.isNotification) {
+                                                     [weakSelf.navigationController dismissViewControllerAnimated:YES completion:nil];
+                                                }
                                                  if (weakSelf.remindePath) {
                                                      [weakSelf.navigationController popViewControllerAnimated:YES];
                                                  }else {
-                                                     [weakSelf dismissViewControllerAnimated:YES completion:nil];}
+                                                     [weakSelf.navigationController dismissViewControllerAnimated:YES completion:nil];}
     }];
-    self.navigationItem.leftBarButtonItem.tintColor = goldColor;
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor brownColor];
     
     //rightBarButton
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
-                                              bk_initWithTitle:@"添加"
-                                              style:UIBarButtonItemStyleDone
-                                              handler:^(id sender) {
-                                                  [self archiveReminder:weakSelf.reminder];
-    }];
-    self.navigationItem.rightBarButtonItem.tintColor = goldColor;
-    
+    if (!self.isNotification) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                                  bk_initWithTitle:@"添加"
+                                                  style:UIBarButtonItemStyleDone
+                                                  handler:^(id sender) {
+                                                      [self archiveReminder:weakSelf.reminder];
+                                                  }];
+        self.navigationItem.rightBarButtonItem.tintColor = [UIColor brownColor];
+    }
     
     //beginTimeTapGesture
     UITapGestureRecognizer *beginTimeTap = [[UITapGestureRecognizer alloc] bk_initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
@@ -186,7 +190,17 @@
                 [weakSelf presentViewController:alert animated:YES completion:nil];
 
             }else {
-                 [weakSelf.navigationController popViewControllerAnimated:YES];
+                
+                NSArray *notifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+                UILocalNotification *existNotification = nil;
+                for (UILocalNotification *notification in notifications) {
+                    if ([notification.userInfo[@"path"] isEqualToString:weakSelf.remindePath]) {
+                        existNotification = notification;
+                        break;
+                    }
+                }
+                [[UIApplication sharedApplication] cancelLocalNotification:existNotification];
+                [weakSelf.navigationController popViewControllerAnimated:YES];
             }
                                                               
         }];
@@ -251,6 +265,33 @@
         }
         if (weakSelf.remindePath) {
             if ([NSKeyedArchiver archiveRootObject:reminder toFile:self.remindePath]) {
+                
+                NSArray *notifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+                UILocalNotification *existNotification = nil;
+                for (UILocalNotification *notification in notifications) {
+                    if ([notification.userInfo[@"path"] isEqualToString:weakSelf.remindePath]) {
+                        existNotification = notification;
+                        break;
+                    }
+                }
+                [[UIApplication sharedApplication] cancelLocalNotification:existNotification];
+                //添加本地通知
+                UILocalNotification *notification = [[UILocalNotification alloc] init];
+                NSDateFormatter *dateFormer = [[NSDateFormatter alloc] init];
+                dateFormer.dateFormat = @"yyyy-MM-dd HH-mm";
+                notification.fireDate = [[dateFormer dateFromString:reminder.beginDate] dateByAddingTimeInterval:-reminder.remindTime.floatValue];
+                notification.timeZone = [NSTimeZone defaultTimeZone];
+                notification.alertBody = [NSString stringWithFormat:@"%@ \n%@",reminder.beginDate,reminder.title];
+                notification.applicationIconBadgeNumber += 1;
+                notification.alertAction = NSLocalizedString(@"View Details", nil);
+                notification.alertTitle = reminder.title;
+                notification.soundName = UILocalNotificationDefaultSoundName;
+                NSDictionary *infoDict = @{
+                                           @"path":self.remindePath
+                                           };
+                notification.userInfo = infoDict;
+                //  设置好本地推送后必须调用此方法启动此推送
+                [[UIApplication sharedApplication] scheduleLocalNotification:notification];
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }else {
                  UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"" message:nil preferredStyle:UIAlertControllerStyleAlert];
@@ -283,13 +324,26 @@
             NSString *docName = [dateFormer stringFromDate:[NSDate date]];;
             //归档文件路径
             NSString *path = [filePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.arch",docName]];
+            //添加本地通知
+            UILocalNotification *notification = [[UILocalNotification alloc] init];
+            dateFormer.dateFormat = @"yyyy-MM-dd HH-mm";
+            notification.fireDate = [[dateFormer dateFromString:reminder.beginDate] dateByAddingTimeInterval:-reminder.remindTime.floatValue];
+            notification.timeZone = [NSTimeZone defaultTimeZone];
+            notification.alertBody = [NSString stringWithFormat:@"%@ \n%@",reminder.beginDate,reminder.title];
+            notification.applicationIconBadgeNumber += 1;
+            notification.alertAction = NSLocalizedString(@"View Details", nil);
+            notification.alertTitle = reminder.title;
+            notification.soundName = UILocalNotificationDefaultSoundName;
+            NSDictionary *infoDict = @{
+                                       @"path":path
+                                       };
+            notification.userInfo = infoDict;
+            //  设置好本地推送后必须调用此方法启动此推送
+            [[UIApplication sharedApplication] scheduleLocalNotification:notification];
             //归档文件
             if ([NSKeyedArchiver archiveRootObject:reminder toFile:path]) {
-                if (weakSelf.remindePath) {
-                    [weakSelf.navigationController popViewControllerAnimated:YES];
-                }else {
-                    [weakSelf dismissViewControllerAnimated:YES completion:nil];
-                }
+                
+                [weakSelf dismissViewControllerAnimated:YES completion:nil];
             }else {
                 UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"" message:nil preferredStyle:UIAlertControllerStyleAlert];
                 alert.title = @"添加失败！";
@@ -309,6 +363,16 @@
         [alert addAction:defaultAction];
         [weakSelf presentViewController:alert animated:YES completion:nil];
     }
+}
+
+-(BOOL)isHadLocalNotificationWithPath:(NSString *)path {
+    NSArray *notifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+    for (UILocalNotification *notification in notifications) {
+        if ([notification.userInfo[@"path"] isEqualToString:path]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 #pragma mark - UITextFeildDelegate

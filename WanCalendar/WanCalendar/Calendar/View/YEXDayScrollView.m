@@ -173,8 +173,11 @@ static const CGFloat middlePercentage = 269.0 / 736;
     if (!_tapView) {
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, self.height *topPercentage, self.width, self.height * middlePercentage)];
         view.backgroundColor = [UIColor clearColor];
+        UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(viewSwipe:)];
+        swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
         [view addGestureRecognizer:tap];
+        [view addGestureRecognizer:swipeDown];
         [self.currentImageView addSubview:view];
         _tapView = view;
     }
@@ -184,6 +187,11 @@ static const CGFloat middlePercentage = 269.0 / 736;
 -(void)viewTapped:(UITapGestureRecognizer *)tap {
     if (self.tapBlock) {
         self.tapBlock(self.currentDate);
+    }
+}
+-(void)viewSwipe:(UISwipeGestureRecognizer *)swipe {
+    if (self.swipeBlock) {
+        self.swipeBlock(self.currentDate);
     }
 }
 

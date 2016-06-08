@@ -15,5 +15,7 @@
 @property (nonatomic, strong) NSDate *currentDate;
 @property (nonatomic, strong) YEXReminder *reminder;
 @property (nonatomic, copy) NSString *remindePath;
+@property (nonatomic, assign) BOOL isNotification;
+
 
 @end

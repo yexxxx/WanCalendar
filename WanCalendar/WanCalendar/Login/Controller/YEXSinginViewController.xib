@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="XBS.ttf">
+            <string>FZXBSJW--GB1-0</string>
+            <string>FZXBSJW--GB1-0</string>
+            <string>FZXBSJW--GB1-0</string>
+            <string>FZXBSJW--GB1-0</string>
+            <string>FZXBSJW--GB1-0</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YEXSinginViewController">
+            <connections>
+                <outlet property="email" destination="ha1-Ie-LR2" id="gkm-sw-KQs"/>
+                <outlet property="loginButton" destination="eNz-Wf-ZRj" id="5Vp-RC-hQM"/>
+                <outlet property="password" destination="220-38-7Qu" id="JRY-Y0-Jcq"/>
+                <outlet property="signButton" destination="gMk-fk-RXG" id="3j1-e9-lVF"/>
+                <outlet property="userName" destination="mvy-eB-Did" id="B9Q-J6-UEF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="9Jc-AE-9Vj">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mvy-eB-Did">
+                    <rect key="frame" x="150" y="200" width="300" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="eFt-Wk-Cir"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="FZXBSJW--GB1-0" family="FZXiaoBiaoSong-B05S" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMk-fk-RXG">
+                    <rect key="frame" x="210" y="410" width="180" height="30"/>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="JIu-KU-wdZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="FZXBSJW--GB1-0" family="FZXiaoBiaoSong-B05S" pointSize="15"/>
+                    <state key="normal" title="注册">
+                        <color key="titleColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="sign:" destination="-1" eventType="touchUpInside" id="1dQ-oc-4QA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNz-Wf-ZRj">
+                    <rect key="frame" x="210" y="550" width="180" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="cAF-iJ-wgW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="FZXBSJW--GB1-0" family="FZXiaoBiaoSong-B05S" pointSize="15"/>
+                    <state key="normal" title="或者，登录"/>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="RUh-E8-Hev"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="220-38-7Qu">
+                    <rect key="frame" x="150" y="270" width="300" height="30"/>
+                    <fontDescription key="fontDescription" name="FZXBSJW--GB1-0" family="FZXiaoBiaoSong-B05S" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="邮箱地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ha1-Ie-LR2">
+                    <rect key="frame" x="150" y="340" width="300" height="30"/>
+                    <fontDescription key="fontDescription" name="FZXBSJW--GB1-0" family="FZXiaoBiaoSong-B05S" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="eNz-Wf-ZRj" secondAttribute="bottom" constant="20" id="1aC-Sr-A0z"/>
+                <constraint firstItem="gMk-fk-RXG" firstAttribute="top" secondItem="ha1-Ie-LR2" secondAttribute="bottom" constant="40" id="2Fk-69-FVx"/>
+                <constraint firstItem="220-38-7Qu" firstAttribute="top" secondItem="mvy-eB-Did" secondAttribute="bottom" constant="40" id="Bnf-dy-9IN"/>
+                <constraint firstItem="mvy-eB-Did" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="CaB-KH-BDF"/>
+                <constraint firstItem="mvy-eB-Did" firstAttribute="centerX" secondItem="9Jc-AE-9Vj" secondAttribute="centerX" id="Ct8-Hk-Vxy"/>
+                <constraint firstItem="ha1-Ie-LR2" firstAttribute="centerX" secondItem="220-38-7Qu" secondAttribute="centerX" id="FgZ-dD-91e"/>
+                <constraint firstItem="gMk-fk-RXG" firstAttribute="centerX" secondItem="ha1-Ie-LR2" secondAttribute="centerX" id="G9K-eX-I31"/>
+                <constraint firstItem="ha1-Ie-LR2" firstAttribute="width" secondItem="220-38-7Qu" secondAttribute="width" id="GQ1-S9-PUK"/>
+                <constraint firstAttribute="trailing" secondItem="9Jc-AE-9Vj" secondAttribute="trailing" id="QHn-oK-UeI"/>
+                <constraint firstAttribute="bottom" secondItem="9Jc-AE-9Vj" secondAttribute="bottom" id="aHA-1N-QGN"/>
+                <constraint firstItem="ha1-Ie-LR2" firstAttribute="top" secondItem="220-38-7Qu" secondAttribute="bottom" constant="40" id="afw-ar-jTZ"/>
+                <constraint firstItem="eNz-Wf-ZRj" firstAttribute="centerX" secondItem="gMk-fk-RXG" secondAttribute="centerX" id="cmu-QQ-1NU"/>
+                <constraint firstItem="220-38-7Qu" firstAttribute="width" secondItem="mvy-eB-Did" secondAttribute="width" id="i7s-IX-g28"/>
+                <constraint firstItem="220-38-7Qu" firstAttribute="centerX" secondItem="9Jc-AE-9Vj" secondAttribute="centerX" id="jWy-hA-FzV"/>
+                <constraint firstItem="9Jc-AE-9Vj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ktC-nY-JCN"/>
+                <constraint firstItem="9Jc-AE-9Vj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p74-NM-0y2"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="824" height="314"/>
+    </resources>
+</document>

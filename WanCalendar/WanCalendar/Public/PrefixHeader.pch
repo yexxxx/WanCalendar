@@ -13,6 +13,7 @@
 #import "Masonry.h"
 #import "SVProgressHUD.h"
 #import <BlocksKit+UIKit.h>
+#import <BmobSDK/Bmob.h>
 
 #define screenW [UIScreen mainScreen].bounds.size.width
 #define screenH [UIScreen mainScreen].bounds.size.height

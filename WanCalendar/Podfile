@@ -1,4 +1,4 @@
-platform :ios, "8.0"
+platform :ios, "9.3"
 
 pod "AFNetworking"
 pod "SDWebImage"
@@ -6,3 +6,4 @@ pod "Masonry"
 pod "SVProgressHUD"
 pod "BlocksKit"
 pod "LinkBlock"
+pod "BmobSDK"

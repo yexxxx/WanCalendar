@@ -8,12 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		6BDBCA9F1D4A2AD0F7755D7A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A98EADF1E717C9F6B9473BE5 /* libPods.a */; };
+		C800BBE11CE991A100CA0C12 /* YEXFetchPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C800BBDF1CE991A100CA0C12 /* YEXFetchPWDViewController.m */; };
+		C800BBE21CE991A100CA0C12 /* YEXFetchPWDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C800BBE01CE991A100CA0C12 /* YEXFetchPWDViewController.xib */; };
+		C80170691CFB25E3005E1855 /* YEXNote.m in Sources */ = {isa = PBXBuildFile; fileRef = C80170681CFB25E3005E1855 /* YEXNote.m */; };
+		C80536E71CF68FC00023644B /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536C51CF68FC00023644B /* ShareSDK.framework */; };
+		C80536E81CF68FC00023644B /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536C81CF68FC00023644B /* ShareSDKExtension.framework */; };
+		C80536E91CF68FC00023644B /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C80536C91CF68FC00023644B /* ShareSDKUI.bundle */; };
+		C80536EA1CF68FC00023644B /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536CA1CF68FC00023644B /* ShareSDKUI.framework */; };
+		C80536ED1CF68FC00023644B /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536D01CF68FC00023644B /* libWeiboSDK.a */; };
+		C80536EE1CF68FC00023644B /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C80536DA1CF68FC00023644B /* WeiboSDK.bundle */; };
+		C80536EF1CF68FC00023644B /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536DE1CF68FC00023644B /* libWeChatSDK.a */; };
+		C80536F01CF68FC00023644B /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = C80536DF1CF68FC00023644B /* README.txt */; };
+		C80536F11CF68FC00023644B /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536E41CF68FC00023644B /* MOBFoundation.framework */; };
+		C80536F21CF68FC00023644B /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C80536E51CF68FC00023644B /* ShareSDK.bundle */; };
+		C80536F31CF68FC00023644B /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536E61CF68FC00023644B /* ShareSDKConnector.framework */; };
+		C80536F51CF690150023644B /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536F41CF690150023644B /* libicucore.tbd */; };
+		C80536F71CF690230023644B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536F61CF690230023644B /* libz.tbd */; };
+		C80536F91CF690350023644B /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536F81CF690350023644B /* libstdc++.tbd */; };
+		C80536FB1CF690440023644B /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536FA1CF690440023644B /* JavaScriptCore.framework */; };
+		C80536FD1CF690550023644B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536FC1CF690550023644B /* ImageIO.framework */; };
+		C80536FF1CF690620023644B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C80536FE1CF690620023644B /* libsqlite3.tbd */; };
+		C80537031CF6CEF60023644B /* YEXUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80537011CF6CEF60023644B /* YEXUserViewController.m */; };
+		C80537041CF6CEF60023644B /* YEXUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C80537021CF6CEF60023644B /* YEXUserViewController.xib */; };
+		C80537081CF6D5EA0023644B /* YEXNotesTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C80537061CF6D5EA0023644B /* YEXNotesTableVC.m */; };
+		C80537091CF6D5EA0023644B /* YEXNotesTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C80537071CF6D5EA0023644B /* YEXNotesTableVC.xib */; };
+		C805370D1CF6D6030023644B /* YEXNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C805370B1CF6D6030023644B /* YEXNoteViewController.m */; };
+		C805370E1CF6D6030023644B /* YEXNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C805370C1CF6D6030023644B /* YEXNoteViewController.xib */; };
 		C8087D301CAE0E3000A49C12 /* YEXDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8087D2F1CAE0E3000A49C12 /* YEXDayViewController.xib */; };
 		C8087D371CAE57D700A49C12 /* YEXLunarDay.m in Sources */ = {isa = PBXBuildFile; fileRef = C8087D361CAE57D700A49C12 /* YEXLunarDay.m */; };
 		C82C2C2F1CD1BDD60039BA2B /* YEXReminderTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C82C2C2D1CD1BDD60039BA2B /* YEXReminderTableVC.m */; };
 		C82C2C301CD1BDD60039BA2B /* YEXReminderTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82C2C2E1CD1BDD60039BA2B /* YEXReminderTableVC.xib */; };
 		C82C2C371CD20E180039BA2B /* YEXReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82C2C351CD20E180039BA2B /* YEXReminderViewController.m */; };
 		C82C2C381CD20E180039BA2B /* YEXReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82C2C361CD20E180039BA2B /* YEXReminderViewController.xib */; };
+		C82F9FB21CFC8D8B00006F5C /* XBS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C82F9FAE1CFC87F900006F5C /* XBS.ttf */; };
+		C82F9FB31CFC8D9A00006F5C /* XBS.ttf in Sources */ = {isa = PBXBuildFile; fileRef = C82F9FAE1CFC87F900006F5C /* XBS.ttf */; };
+		C839FC271CE580490069CCC3 /* YEXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C839FC251CE580490069CCC3 /* YEXLoginViewController.m */; };
+		C839FC281CE580490069CCC3 /* YEXLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C839FC261CE580490069CCC3 /* YEXLoginViewController.xib */; };
+		C839FC2C1CE5A2690069CCC3 /* YEXSinginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C839FC2A1CE5A2690069CCC3 /* YEXSinginViewController.m */; };
+		C839FC2D1CE5A2690069CCC3 /* YEXSinginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C839FC2B1CE5A2690069CCC3 /* YEXSinginViewController.xib */; };
 		C83FDD611CD75435000B96A5 /* YEXReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = C83FDD601CD75435000B96A5 /* YEXReminder.m */; };
 		C83FDD641CD847AC000B96A5 /* NSObject+YEXArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C83FDD631CD847AC000B96A5 /* NSObject+YEXArchive.m */; };
 		C83FDD681CD85EB9000B96A5 /* YEXReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C83FDD661CD85EB9000B96A5 /* YEXReminderCell.m */; };
@@ -70,7 +102,6 @@
 		C896D8461CAD18B800F4B5B2 /* YEXDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C896D8451CAD18B800F4B5B2 /* YEXDayViewController.m */; };
 		C896D8491CAD209600F4B5B2 /* YEXYearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C896D8481CAD209600F4B5B2 /* YEXYearViewController.m */; };
 		C8F9D62B1CB552FC00C113A9 /* YEXYellowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F9D62A1CB552FC00C113A9 /* YEXYellowView.m */; };
-		C8F9D62D1CB62B8A00C113A9 /* XBS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8F9D62C1CB62B8A00C113A9 /* XBS.ttf */; };
 		C8F9D6301CB6331900C113A9 /* YEXRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F9D62F1CB6331900C113A9 /* YEXRowView.m */; };
 		C8F9D6521CB6513900C113A9 /* CALayer+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F9D6331CB6513900C113A9 /* CALayer+FSExtension.m */; };
 		C8F9D6531CB6513900C113A9 /* FSCalendar+IBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F9D6351CB6513900C113A9 /* FSCalendar+IBExtension.m */; };
@@ -112,6 +143,51 @@
 		765855704F81831694D0B642 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8FDBE5F3DADB174E54BD124F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A98EADF1E717C9F6B9473BE5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C800BBDE1CE991A100CA0C12 /* YEXFetchPWDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXFetchPWDViewController.h; sourceTree = "<group>"; };
+		C800BBDF1CE991A100CA0C12 /* YEXFetchPWDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXFetchPWDViewController.m; sourceTree = "<group>"; };
+		C800BBE01CE991A100CA0C12 /* YEXFetchPWDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXFetchPWDViewController.xib; sourceTree = "<group>"; };
+		C80170671CFB25E3005E1855 /* YEXNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXNote.h; sourceTree = "<group>"; };
+		C80170681CFB25E3005E1855 /* YEXNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXNote.m; sourceTree = "<group>"; };
+		C80536C51CF68FC00023644B /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
+		C80536C81CF68FC00023644B /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
+		C80536C91CF68FC00023644B /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
+		C80536CA1CF68FC00023644B /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKUI.framework; sourceTree = "<group>"; };
+		C80536D01CF68FC00023644B /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		C80536D11CF68FC00023644B /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
+		C80536D21CF68FC00023644B /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
+		C80536D31CF68FC00023644B /* WBHttpRequest+WeiboToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboToken.h"; sourceTree = "<group>"; };
+		C80536D41CF68FC00023644B /* WBHttpRequest+WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboUser.h"; sourceTree = "<group>"; };
+		C80536D51CF68FC00023644B /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
+		C80536D61CF68FC00023644B /* WBSDKBasicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKBasicButton.h; sourceTree = "<group>"; };
+		C80536D71CF68FC00023644B /* WBSDKCommentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKCommentButton.h; sourceTree = "<group>"; };
+		C80536D81CF68FC00023644B /* WBSDKRelationshipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKRelationshipButton.h; sourceTree = "<group>"; };
+		C80536D91CF68FC00023644B /* WeiboSDK+Statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK+Statistics.h"; sourceTree = "<group>"; };
+		C80536DA1CF68FC00023644B /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		C80536DB1CF68FC00023644B /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		C80536DC1CF68FC00023644B /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
+		C80536DE1CF68FC00023644B /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		C80536DF1CF68FC00023644B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		C80536E01CF68FC00023644B /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		C80536E11CF68FC00023644B /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		C80536E21CF68FC00023644B /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		C80536E41CF68FC00023644B /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		C80536E51CF68FC00023644B /* ShareSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDK.bundle; sourceTree = "<group>"; };
+		C80536E61CF68FC00023644B /* ShareSDKConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConnector.framework; sourceTree = "<group>"; };
+		C80536F41CF690150023644B /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		C80536F61CF690230023644B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C80536F81CF690350023644B /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		C80536FA1CF690440023644B /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C80536FC1CF690550023644B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C80536FE1CF690620023644B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C80537001CF6CEF60023644B /* YEXUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXUserViewController.h; sourceTree = "<group>"; };
+		C80537011CF6CEF60023644B /* YEXUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXUserViewController.m; sourceTree = "<group>"; };
+		C80537021CF6CEF60023644B /* YEXUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXUserViewController.xib; sourceTree = "<group>"; };
+		C80537051CF6D5EA0023644B /* YEXNotesTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXNotesTableVC.h; sourceTree = "<group>"; };
+		C80537061CF6D5EA0023644B /* YEXNotesTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXNotesTableVC.m; sourceTree = "<group>"; };
+		C80537071CF6D5EA0023644B /* YEXNotesTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXNotesTableVC.xib; sourceTree = "<group>"; };
+		C805370A1CF6D6030023644B /* YEXNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXNoteViewController.h; sourceTree = "<group>"; };
+		C805370B1CF6D6030023644B /* YEXNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXNoteViewController.m; sourceTree = "<group>"; };
+		C805370C1CF6D6030023644B /* YEXNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXNoteViewController.xib; sourceTree = "<group>"; };
 		C8087D2F1CAE0E3000A49C12 /* YEXDayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXDayViewController.xib; sourceTree = "<group>"; };
 		C8087D351CAE57D700A49C12 /* YEXLunarDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXLunarDay.h; sourceTree = "<group>"; };
 		C8087D361CAE57D700A49C12 /* YEXLunarDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXLunarDay.m; sourceTree = "<group>"; };
@@ -121,6 +197,13 @@
 		C82C2C341CD20E180039BA2B /* YEXReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXReminderViewController.h; sourceTree = "<group>"; };
 		C82C2C351CD20E180039BA2B /* YEXReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXReminderViewController.m; sourceTree = "<group>"; };
 		C82C2C361CD20E180039BA2B /* YEXReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXReminderViewController.xib; sourceTree = "<group>"; };
+		C82F9FAE1CFC87F900006F5C /* XBS.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = XBS.ttf; sourceTree = "<group>"; };
+		C839FC241CE580490069CCC3 /* YEXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXLoginViewController.h; sourceTree = "<group>"; };
+		C839FC251CE580490069CCC3 /* YEXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXLoginViewController.m; sourceTree = "<group>"; };
+		C839FC261CE580490069CCC3 /* YEXLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXLoginViewController.xib; sourceTree = "<group>"; };
+		C839FC291CE5A2690069CCC3 /* YEXSinginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXSinginViewController.h; sourceTree = "<group>"; };
+		C839FC2A1CE5A2690069CCC3 /* YEXSinginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXSinginViewController.m; sourceTree = "<group>"; };
+		C839FC2B1CE5A2690069CCC3 /* YEXSinginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YEXSinginViewController.xib; sourceTree = "<group>"; };
 		C83FDD5F1CD75435000B96A5 /* YEXReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXReminder.h; sourceTree = "<group>"; };
 		C83FDD601CD75435000B96A5 /* YEXReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXReminder.m; sourceTree = "<group>"; };
 		C83FDD621CD847AC000B96A5 /* NSObject+YEXArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YEXArchive.h"; sourceTree = "<group>"; };
@@ -201,7 +284,6 @@
 		C896D8481CAD209600F4B5B2 /* YEXYearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXYearViewController.m; sourceTree = "<group>"; };
 		C8F9D6291CB552FC00C113A9 /* YEXYellowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXYellowView.h; sourceTree = "<group>"; };
 		C8F9D62A1CB552FC00C113A9 /* YEXYellowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXYellowView.m; sourceTree = "<group>"; };
-		C8F9D62C1CB62B8A00C113A9 /* XBS.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = XBS.ttf; path = "../../../../../每日故宫 1.3.1/Payload/ThePalaceMuseumDaily.app/XBS.ttf"; sourceTree = "<group>"; };
 		C8F9D62E1CB6331900C113A9 /* YEXRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YEXRowView.h; sourceTree = "<group>"; };
 		C8F9D62F1CB6331900C113A9 /* YEXRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YEXRowView.m; sourceTree = "<group>"; };
 		C8F9D6321CB6513900C113A9 /* CALayer+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+FSExtension.h"; sourceTree = "<group>"; };
@@ -245,7 +327,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80536FF1CF690620023644B /* libsqlite3.tbd in Frameworks */,
+				C80536FD1CF690550023644B /* ImageIO.framework in Frameworks */,
+				C80536FB1CF690440023644B /* JavaScriptCore.framework in Frameworks */,
+				C80536F91CF690350023644B /* libstdc++.tbd in Frameworks */,
+				C80536F71CF690230023644B /* libz.tbd in Frameworks */,
+				C80536F51CF690150023644B /* libicucore.tbd in Frameworks */,
+				C80536F11CF68FC00023644B /* MOBFoundation.framework in Frameworks */,
+				C80536EF1CF68FC00023644B /* libWeChatSDK.a in Frameworks */,
+				C80536ED1CF68FC00023644B /* libWeiboSDK.a in Frameworks */,
 				6BDBCA9F1D4A2AD0F7755D7A /* libPods.a in Frameworks */,
+				C80536E71CF68FC00023644B /* ShareSDK.framework in Frameworks */,
+				C80536E81CF68FC00023644B /* ShareSDKExtension.framework in Frameworks */,
+				C80536F31CF68FC00023644B /* ShareSDKConnector.framework in Frameworks */,
+				C80536EA1CF68FC00023644B /* ShareSDKUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,9 +373,95 @@
 		A9255CA1A18776A63618E340 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C80536FE1CF690620023644B /* libsqlite3.tbd */,
+				C80536FC1CF690550023644B /* ImageIO.framework */,
+				C80536FA1CF690440023644B /* JavaScriptCore.framework */,
+				C80536F81CF690350023644B /* libstdc++.tbd */,
+				C80536F61CF690230023644B /* libz.tbd */,
+				C80536F41CF690150023644B /* libicucore.tbd */,
 				A98EADF1E717C9F6B9473BE5 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C80536C41CF68FC00023644B /* ShareSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C80536C51CF68FC00023644B /* ShareSDK.framework */,
+				C80536C61CF68FC00023644B /* Support */,
+			);
+			path = ShareSDK;
+			sourceTree = "<group>";
+		};
+		C80536C61CF68FC00023644B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C80536C71CF68FC00023644B /* Optional */,
+				C80536CB1CF68FC00023644B /* PlatformSDK */,
+				C80536E31CF68FC00023644B /* Required */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		C80536C71CF68FC00023644B /* Optional */ = {
+			isa = PBXGroup;
+			children = (
+				C80536C81CF68FC00023644B /* ShareSDKExtension.framework */,
+				C80536C91CF68FC00023644B /* ShareSDKUI.bundle */,
+				C80536CA1CF68FC00023644B /* ShareSDKUI.framework */,
+			);
+			path = Optional;
+			sourceTree = "<group>";
+		};
+		C80536CB1CF68FC00023644B /* PlatformSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C80536CF1CF68FC00023644B /* SinaWeiboSDK */,
+				C80536DD1CF68FC00023644B /* WeChatSDK */,
+			);
+			path = PlatformSDK;
+			sourceTree = "<group>";
+		};
+		C80536CF1CF68FC00023644B /* SinaWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C80536D01CF68FC00023644B /* libWeiboSDK.a */,
+				C80536D11CF68FC00023644B /* WBHttpRequest+WeiboGame.h */,
+				C80536D21CF68FC00023644B /* WBHttpRequest+WeiboShare.h */,
+				C80536D31CF68FC00023644B /* WBHttpRequest+WeiboToken.h */,
+				C80536D41CF68FC00023644B /* WBHttpRequest+WeiboUser.h */,
+				C80536D51CF68FC00023644B /* WBHttpRequest.h */,
+				C80536D61CF68FC00023644B /* WBSDKBasicButton.h */,
+				C80536D71CF68FC00023644B /* WBSDKCommentButton.h */,
+				C80536D81CF68FC00023644B /* WBSDKRelationshipButton.h */,
+				C80536D91CF68FC00023644B /* WeiboSDK+Statistics.h */,
+				C80536DA1CF68FC00023644B /* WeiboSDK.bundle */,
+				C80536DB1CF68FC00023644B /* WeiboSDK.h */,
+				C80536DC1CF68FC00023644B /* WeiboUser.h */,
+			);
+			path = SinaWeiboSDK;
+			sourceTree = "<group>";
+		};
+		C80536DD1CF68FC00023644B /* WeChatSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C80536DE1CF68FC00023644B /* libWeChatSDK.a */,
+				C80536DF1CF68FC00023644B /* README.txt */,
+				C80536E01CF68FC00023644B /* WechatAuthSDK.h */,
+				C80536E11CF68FC00023644B /* WXApi.h */,
+				C80536E21CF68FC00023644B /* WXApiObject.h */,
+			);
+			path = WeChatSDK;
+			sourceTree = "<group>";
+		};
+		C80536E31CF68FC00023644B /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				C80536E41CF68FC00023644B /* MOBFoundation.framework */,
+				C80536E51CF68FC00023644B /* ShareSDK.bundle */,
+				C80536E61CF68FC00023644B /* ShareSDKConnector.framework */,
+			);
+			path = Required;
 			sourceTree = "<group>";
 		};
 		C870C6521CD3609B003794E4 /* Transiations */ = {
@@ -298,7 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				C870C6521CD3609B003794E4 /* Transiations */,
-				C8F9D62C1CB62B8A00C113A9 /* XBS.ttf */,
+				C82F9FAE1CFC87F900006F5C /* XBS.ttf */,
 				C88436BD1CB3A7A600422AA4 /* PrefixHeader.pch */,
 				C88436BE1CB3A7A600422AA4 /* UIView+YEXView.h */,
 				C88436BF1CB3A7A600422AA4 /* UIView+YEXView.m */,
@@ -397,6 +578,7 @@
 		C896D8011CACD98400F4B5B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C80536C41CF68FC00023644B /* ShareSDK */,
 				C896D8041CACD98400F4B5B2 /* AppDelegate.h */,
 				C896D8051CACD98400F4B5B2 /* AppDelegate.m */,
 				C896D80F1CACD98400F4B5B2 /* LaunchScreen.storyboard */,
@@ -491,6 +673,18 @@
 		C896D8391CAD174400F4B5B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C839FC241CE580490069CCC3 /* YEXLoginViewController.h */,
+				C839FC251CE580490069CCC3 /* YEXLoginViewController.m */,
+				C839FC261CE580490069CCC3 /* YEXLoginViewController.xib */,
+				C839FC291CE5A2690069CCC3 /* YEXSinginViewController.h */,
+				C839FC2A1CE5A2690069CCC3 /* YEXSinginViewController.m */,
+				C839FC2B1CE5A2690069CCC3 /* YEXSinginViewController.xib */,
+				C800BBDE1CE991A100CA0C12 /* YEXFetchPWDViewController.h */,
+				C800BBDF1CE991A100CA0C12 /* YEXFetchPWDViewController.m */,
+				C800BBE01CE991A100CA0C12 /* YEXFetchPWDViewController.xib */,
+				C80537001CF6CEF60023644B /* YEXUserViewController.h */,
+				C80537011CF6CEF60023644B /* YEXUserViewController.m */,
+				C80537021CF6CEF60023644B /* YEXUserViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -522,6 +716,12 @@
 		C896D83D1CAD174400F4B5B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C80537051CF6D5EA0023644B /* YEXNotesTableVC.h */,
+				C80537061CF6D5EA0023644B /* YEXNotesTableVC.m */,
+				C80537071CF6D5EA0023644B /* YEXNotesTableVC.xib */,
+				C805370A1CF6D6030023644B /* YEXNoteViewController.h */,
+				C805370B1CF6D6030023644B /* YEXNoteViewController.m */,
+				C805370C1CF6D6030023644B /* YEXNoteViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -529,6 +729,8 @@
 		C896D83E1CAD174400F4B5B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C80170671CFB25E3005E1855 /* YEXNote.h */,
+				C80170681CFB25E3005E1855 /* YEXNote.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -736,22 +938,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				C82C2C301CD1BDD60039BA2B /* YEXReminderTableVC.xib in Resources */,
+				C805370E1CF6D6030023644B /* YEXNoteViewController.xib in Resources */,
+				C839FC281CE580490069CCC3 /* YEXLoginViewController.xib in Resources */,
 				C892E6CA1CAE76CB0055B095 /* 7.png in Resources */,
 				C892E6C31CAE76CB0055B095 /* 29.png in Resources */,
 				C892E6C61CAE76CB0055B095 /* 31.png in Resources */,
 				C892E6C21CAE76CB0055B095 /* 28.png in Resources */,
 				C892E6B61CAE76CB0055B095 /* 17.png in Resources */,
+				C80537041CF6CEF60023644B /* YEXUserViewController.xib in Resources */,
+				C80536E91CF68FC00023644B /* ShareSDKUI.bundle in Resources */,
 				C892E6C81CAE76CB0055B095 /* 5.png in Resources */,
+				C80537091CF6D5EA0023644B /* YEXNotesTableVC.xib in Resources */,
 				C892E6B31CAE76CB0055B095 /* 14.png in Resources */,
 				C892E6C11CAE76CB0055B095 /* 27.png in Resources */,
 				C892E6CB1CAE76CB0055B095 /* 8.png in Resources */,
 				C892E6BE1CAE76CB0055B095 /* 24.png in Resources */,
+				C800BBE21CE991A100CA0C12 /* YEXFetchPWDViewController.xib in Resources */,
+				C80536EE1CF68FC00023644B /* WeiboSDK.bundle in Resources */,
 				C8087D301CAE0E3000A49C12 /* YEXDayViewController.xib in Resources */,
 				C896D8111CACD98400F4B5B2 /* LaunchScreen.storyboard in Resources */,
 				C83FDD691CD85EB9000B96A5 /* YEXReminderCell.xib in Resources */,
 				C892E6BC1CAE76CB0055B095 /* 22.png in Resources */,
 				C892E6B21CAE76CB0055B095 /* 13.png in Resources */,
 				C892E6B81CAE76CB0055B095 /* 19.png in Resources */,
+				C80536F01CF68FC00023644B /* README.txt in Resources */,
 				C892E6AF1CAE76CB0055B095 /* 10.png in Resources */,
 				C892E6C91CAE76CB0055B095 /* 6.png in Resources */,
 				C892E6C41CAE76CB0055B095 /* 3.png in Resources */,
@@ -760,14 +970,16 @@
 				C8F9D65E1CB6513900C113A9 /* Info.plist in Resources */,
 				C892E6BD1CAE76CB0055B095 /* 23.png in Resources */,
 				C892E6B11CAE76CB0055B095 /* 12.png in Resources */,
+				C80536F21CF68FC00023644B /* ShareSDK.bundle in Resources */,
+				C839FC2D1CE5A2690069CCC3 /* YEXSinginViewController.xib in Resources */,
 				C892E6C71CAE76CB0055B095 /* 4.png in Resources */,
 				C892E6CC1CAE76CB0055B095 /* 9.png in Resources */,
-				C8F9D62D1CB62B8A00C113A9 /* XBS.ttf in Resources */,
 				C896D80C1CACD98400F4B5B2 /* Main.storyboard in Resources */,
 				C892E6BA1CAE76CB0055B095 /* 20.png in Resources */,
 				C82C2C381CD20E180039BA2B /* YEXReminderViewController.xib in Resources */,
 				C892E6C01CAE76CB0055B095 /* 26.png in Resources */,
 				C892E6C51CAE76CB0055B095 /* 30.png in Resources */,
+				C82F9FB21CFC8D8B00006F5C /* XBS.ttf in Resources */,
 				C892E6B91CAE76CB0055B095 /* 2.png in Resources */,
 				C892E6B51CAE76CB0055B095 /* 16.png in Resources */,
 				C85F733E1CD63D1900FFAFBE /* YEXTimePickerViewController.xib in Resources */,
@@ -848,24 +1060,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82F9FB31CFC8D9A00006F5C /* XBS.ttf in Sources */,
 				C896D8461CAD18B800F4B5B2 /* YEXDayViewController.m in Sources */,
 				C88436C21CB3A7A600422AA4 /* UIView+YEXView.m in Sources */,
 				C83FDD611CD75435000B96A5 /* YEXReminder.m in Sources */,
 				C85F73471CD7218200FFAFBE /* YEXAddRmdTableViewController.m in Sources */,
+				C80537081CF6D5EA0023644B /* YEXNotesTableVC.m in Sources */,
 				C82C2C2F1CD1BDD60039BA2B /* YEXReminderTableVC.m in Sources */,
 				C8F9D6531CB6513900C113A9 /* FSCalendar+IBExtension.m in Sources */,
 				C8F9D6641CB651DD00C113A9 /* YEXMonthViewController.m in Sources */,
 				C82C2C371CD20E180039BA2B /* YEXReminderViewController.m in Sources */,
+				C800BBE11CE991A100CA0C12 /* YEXFetchPWDViewController.m in Sources */,
 				C83FDD681CD85EB9000B96A5 /* YEXReminderCell.m in Sources */,
+				C839FC271CE580490069CCC3 /* YEXLoginViewController.m in Sources */,
 				C8F9D6551CB6513900C113A9 /* FSCalendarAnimator.m in Sources */,
 				C8F9D6561CB6513900C113A9 /* FSCalendarAppearance.m in Sources */,
 				C85F73391CD3B1A300FFAFBE /* YEXUnflodTransiation.m in Sources */,
 				C8F9D6521CB6513900C113A9 /* CALayer+FSExtension.m in Sources */,
 				C896D8061CACD98400F4B5B2 /* AppDelegate.m in Sources */,
+				C805370D1CF6D6030023644B /* YEXNoteViewController.m in Sources */,
 				C8F9D65D1CB6513900C113A9 /* FSCalendarStickyHeader.m in Sources */,
 				C8F9D62B1CB552FC00C113A9 /* YEXYellowView.m in Sources */,
+				C839FC2C1CE5A2690069CCC3 /* YEXSinginViewController.m in Sources */,
 				C8087D371CAE57D700A49C12 /* YEXLunarDay.m in Sources */,
 				C85F73511CD7253100FFAFBE /* YEXCategoryCell.m in Sources */,
+				C80170691CFB25E3005E1855 /* YEXNote.m in Sources */,
 				C896D8491CAD209600F4B5B2 /* YEXYearViewController.m in Sources */,
 				C85F73421CD7214E00FFAFBE /* YEXCategoryTableViewController.m in Sources */,
 				C8F9D6541CB6513900C113A9 /* FSCalendar.m in Sources */,
@@ -883,6 +1102,7 @@
 				C88436C61CB4B8A800422AA4 /* YEXDateView.m in Sources */,
 				C870C6551CD360E0003794E4 /* YEXUnflodTransiationAnimator.m in Sources */,
 				C8F9D6301CB6331900C113A9 /* YEXRowView.m in Sources */,
+				C80537031CF6CEF60023644B /* YEXUserViewController.m in Sources */,
 				C8F9D6571CB6513900C113A9 /* FSCalendarCell.m in Sources */,
 				C896D8031CACD98400F4B5B2 /* main.m in Sources */,
 				C8F9D6611CB6513900C113A9 /* UIView+FSExtension.m in Sources */,
@@ -977,7 +1197,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1015,7 +1235,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1027,9 +1247,21 @@
 			baseConfigurationReference = 8FDBE5F3DADB174E54BD124F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK/Support/Required",
+				);
 				GCC_PREFIX_HEADER = WanCalendar/Public/PrefixHeader.pch;
 				INFOPLIST_FILE = WanCalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK/Support/PlatformSDK/WeChatSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yex.WanCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1040,9 +1272,21 @@
 			baseConfigurationReference = 765855704F81831694D0B642 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK/Support/Required",
+				);
 				GCC_PREFIX_HEADER = WanCalendar/Public/PrefixHeader.pch;
 				INFOPLIST_FILE = WanCalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
+					"$(PROJECT_DIR)/WanCalendar/ShareSDK/Support/PlatformSDK/WeChatSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yex.WanCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="XBS.ttf">
+            <string>FZXBSJW--GB1-0</string>
+            <string>FZXBSJW--GB1-0</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YEXNoteViewController">
+            <connections>
+                <outlet property="contentText" destination="Kan-jA-ShS" id="2j3-YR-KIK"/>
+                <outlet property="titleText" destination="0wv-Vt-TSf" id="TvX-5y-BHe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfR-ox-1wE">
+                    <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wv-Vt-TSf">
+                            <rect key="frame" x="100" y="7" width="490" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFJ-ik-XuQ">
+                            <rect key="frame" x="10" y="11" width="80" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="HbG-t0-smi"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="FZXBSJW--GB1-0" family="FZXiaoBiaoSong-B05S" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="0wv-Vt-TSf" secondAttribute="trailing" constant="10" id="4P1-4S-99Y"/>
+                        <constraint firstAttribute="height" constant="44" id="5to-Es-Jod"/>
+                        <constraint firstItem="0wv-Vt-TSf" firstAttribute="baseline" secondItem="CFJ-ik-XuQ" secondAttribute="baseline" id="Jit-wE-y6V"/>
+                        <constraint firstItem="CFJ-ik-XuQ" firstAttribute="leading" secondItem="dfR-ox-1wE" secondAttribute="leading" constant="10" id="L6u-EK-goc"/>
+                        <constraint firstItem="0wv-Vt-TSf" firstAttribute="leading" secondItem="CFJ-ik-XuQ" secondAttribute="trailing" constant="10" id="NnQ-pW-erp"/>
+                        <constraint firstItem="CFJ-ik-XuQ" firstAttribute="centerY" secondItem="dfR-ox-1wE" secondAttribute="centerY" id="QcP-TC-fJf"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kan-jA-ShS">
+                    <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="FZXBSJW--GB1-0" family="FZXiaoBiaoSong-B05S" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dfR-ox-1wE" secondAttribute="trailing" id="2Rc-ct-4By"/>
+                <constraint firstItem="dfR-ox-1wE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AR4-9n-gRG"/>
+                <constraint firstItem="Kan-jA-ShS" firstAttribute="top" secondItem="dfR-ox-1wE" secondAttribute="bottom" id="BDk-p0-y2b"/>
+                <constraint firstItem="dfR-ox-1wE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Lvc-wf-juO"/>
+                <constraint firstAttribute="bottom" secondItem="Kan-jA-ShS" secondAttribute="bottom" id="Ouz-F3-GAO"/>
+                <constraint firstAttribute="trailing" secondItem="Kan-jA-ShS" secondAttribute="trailing" id="XGf-ao-mTW"/>
+                <constraint firstItem="Kan-jA-ShS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ryF-ep-52m"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

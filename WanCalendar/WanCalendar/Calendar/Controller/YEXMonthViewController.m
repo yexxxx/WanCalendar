@@ -45,8 +45,8 @@
     self.navigationItem.title = [self num2CN:[NSString stringWithFormat:@"%ld", (long)[self.calendar yearOfDate:self.currentDate]]];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(leftButtonClicked)];
      self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加" style:UIBarButtonItemStyleDone target:self action:@selector(rightButtonClicked)];
-    self.navigationItem.leftBarButtonItem.tintColor = goldColor;
-    self.navigationItem.rightBarButtonItem.tintColor = goldColor;
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor brownColor];
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor brownColor];
     
 }
 
